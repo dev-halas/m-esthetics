@@ -1,0 +1,28 @@
+{
+    "name": "nazwa_motywu",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --watch --watch-poll",
+        "clean": "rimraf public",
+        "start": "webpack --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "css-loader": "^4.2.2",
+        "cssnano-webpack-plugin": "^1.0.3",
+        "html-webpack-plugin": "^4.4.1",
+        "mini-css-extract-plugin": "^0.11.1",
+        "optimize-css-assets-webpack-plugin": "^5.0.4",
+        "purgecss-webpack-plugin": "^2.3.0",
+        "rimraf": "^3.0.2",
+        "sass-loader": "^10.4.1",
+        "style-loader": "^1.2.1",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    }
+}
