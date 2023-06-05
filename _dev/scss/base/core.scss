@@ -118,3 +118,12 @@ $containerMobile: 90vw;
     grid-column: span 1;
 }
 
+@include responsive('small') {
+    .gridCols2, .gridCols3, .gridCols4 {
+        grid-template-columns: 1fr;
+    }
+
+    .span1, .span2, .span3, .span4 {
+        grid-column: span 1;
+    }
+}
