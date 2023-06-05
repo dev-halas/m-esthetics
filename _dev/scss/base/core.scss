@@ -89,3 +89,32 @@ $containerMobile: 90vw;
         margin-top: 0px !important;
     }
 }
+
+.gridCols2{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gridCols3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gridCols4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.span4 {
+    grid-column: span 4;
+}
+
+.span3 {
+    grid-column: span 3;
+}
+
+.span2 {
+    grid-column: span 2;
+}
+
+.span1 {
+    grid-column: span 1;
+}
+
