@@ -1,0 +1,31 @@
+.about {
+    position: relative;
+}
+
+.glow {
+    top: 10%;
+    left: 50%;
+}
+
+.about-container {
+    padding: 5% 0;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    @include responsive('tablet') {
+        flex-direction: column;
+        width: min(90vw, 1920px);
+        gap: 50px;
+        align-items: baseline;
+        padding: 10% 0;
+    }
+}
+
+.about-header {
+    flex: 0.4;
+}
+
+.about-text {
+    flex: 1;
+}

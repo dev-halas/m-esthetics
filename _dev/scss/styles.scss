@@ -1,10 +1,13 @@
 @import "./base/reset.scss";
 @import "./base/colors.scss";
+@import "./base/typography.scss";
 @import "./base/core.scss";
 
 
 /* ------ Layouts ------ */
 
-
+@import "./layout/about.scss";
+@import "./layout/people.scss";
+@import "./layout/offer.scss";
 
 /* ------ Components ------ */

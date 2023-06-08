@@ -19,6 +19,11 @@ h1, h2, h3, h4 {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+}
+
+a, p {
+    line-height: 1.5;
 }
 
 h1 {
@@ -27,17 +32,18 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: calculate-clamp(40, 50);
+    font-weight: 500;
 }
 
 h3 {
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h4 {
     font-size: 1.4rem;
+    font-weight: 500;
 }
 
 h1,h2,h3,h4 {
@@ -84,6 +90,15 @@ $containerMobile: 90vw;
     }
 }
 
+.container-big {
+    @extend .container;
+    width: min(94vw, 1920px);
+
+    @include responsive('small') {
+        width: min(90vw, 768px);
+    }
+}
+
 @media screen and (max-width: 782px) {
     html {
         margin-top: 0px !important;
@@ -116,6 +131,12 @@ $containerMobile: 90vw;
 
 .span1 {
     grid-column: span 1;
+}
+
+.glow {
+    z-index: -1;
+    position: absolute;
+    box-shadow: 0 0 600px 800px $creamy-glow;
 }
 
 @include responsive('small') {

@@ -1,0 +1,31 @@
+.people-container {
+    display: flex;
+    padding-top: 150px;
+
+    @include responsive('small') {
+        justify-content: center;
+    }
+}
+
+.people-image {
+    display: flex;
+    align-items: center;
+
+    &.second > img {
+        transform: scale(1.2);
+    }
+
+    &.first > img {
+        margin-left: auto;
+    }
+
+    @include responsive('small') {
+        &:not(.second) {
+            display: none;
+        }
+
+        &.second > img {
+            transform: scale(1);
+        }
+    }
+}

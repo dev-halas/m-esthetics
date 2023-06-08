@@ -1,0 +1,28 @@
+@use "sass:math";
+
+@function calculate-clamp(
+    $min-size, 
+    $max-size, 
+    $min-viewport-width: 768, 
+    $max-viewport-width: 1920
+) {
+    $preffered-viewport-width: 
+        math.div(100 * ($max-size - $min-size), 
+        $max-viewport-width - $min-viewport-width);
+
+    $relative-size-to-browser-size: 
+        math.div($min-viewport-width * $max-size - $max-viewport-width * $min-size, 
+        $min-viewport-width - $max-viewport-width);
+
+    @return clamp(
+        #{convert-to-rem($min-size)}rem, 
+        #{$preffered-viewport-width}vw + #{convert-to-rem($relative-size-to-browser-size)}rem,
+        #{convert-to-rem($max-size)}rem
+    )
+};
+
+@function convert-to-rem($value) {
+    $base: 16;
+
+    @return math.div($value, $base);
+}
