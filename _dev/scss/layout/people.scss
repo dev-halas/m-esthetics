@@ -1,6 +1,7 @@
 .people-container {
     display: flex;
     padding-top: 150px;
+    position: relative;
 
     @include responsive('small') {
         justify-content: center;
@@ -10,22 +11,54 @@
 .people-image {
     display: flex;
     align-items: center;
+    position: relative;
 
-    &.second > img {
+    & > img {
+        transform: scale(1);
+        @include transition(transform); 
+    }
+
+    & > .people-image-info {
+        position: absolute;
+        left: 0;
+        top: 35%;
+        z-index: 1;
+        background-color: $white;
+        padding: 40px;
+        opacity: 0;
+        @include transition(opacity); 
+
+        h5 {
+            margin-bottom: 20px;
+        }
+    }
+
+    &.active > img {
         transform: scale(1.2);
+        @include transition(transform); 
+        position: relative;
+        z-index: 1;
     }
 
-    &.first > img {
-        margin-left: auto;
+    &.active > .people-image-info {
+        opacity: 1;
+        @include transition(opacity); 
     }
+}
 
-    @include responsive('small') {
-        &:not(.second) {
-            display: none;
-        }
+.people-slider--left,
+.people-slider--right {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+}
 
-        &.second > img {
-            transform: scale(1);
-        }
-    }
+.people-slider--left {
+    left: -50px;
+}
+
+.people-slider--right {
+    right: -50px;
 }
