@@ -61,11 +61,19 @@
     padding: 5vw 0;
     width: 80%;
 
+    &.center {
+        justify-content: center;
+    }
+
     @include responsive('tablet') {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid $grey;
         padding: 5vw 3vw;
+
+        &.center {
+            justify-content: initial;
+        }
     }
 
     @include responsive('small') {

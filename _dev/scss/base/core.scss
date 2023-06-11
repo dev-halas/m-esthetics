@@ -118,8 +118,12 @@ $containerMobile: 90vw;
     }
 }
 
-.gridCols2, .gridCols3, .gridCols4 {
+.gridCols1, .gridCols2, .gridCols3, .gridCols4 {
     display: grid;
+}
+
+.gridCols1{
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .gridCols2{

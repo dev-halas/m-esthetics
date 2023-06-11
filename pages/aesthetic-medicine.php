@@ -11,7 +11,7 @@
                 <img src="<?php echo THEME_URL; ?>_dev/img/beautiful-woman-face-aesthetic-medicine-page.jpg" alt="twarz kobiety">
             </div>
         </section>
-        <section>
+        <section id="toksyna">
             <div class="container offer-page-container gridCols2">
                 <h2 class="offer-page-header"><span class="c-gold">toksyna</span></br>botulinowa</h2>
                 <div class="offer-page-text">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-light-grey pos-rel">
+        <section id="kwas" class="bg-light-grey pos-rel">
             <div class="glow top-100"></div>
             <div class="container offer-page-container gridCols2">
                 <h2 class="offer-page-header"><span class="c-gold">kwas</span></br>hialuronowy</h2>
@@ -100,7 +100,7 @@
                 <img src="<?php echo THEME_URL; ?>_dev/img/plant-on-table.jpg" alt="wazon z rośliną">
             </div>
         </section>
-        <section>
+        <section id="lipoliza">
             <div class="container offer-page-container gridCols2">
                 <h2 class="offer-page-header"><span class="c-gold">lipoliza</span></br>iniekcyjna</h2>
                 <div class="offer-page-text">
@@ -140,9 +140,9 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="osocze">
             <div class="container offer-page-container gridCols2">
-                <h2 class="offer-page-header"><span class="c-gold">osocze</span></h2>
+                <h2 class="offer-page-header c-gold">osocze</h2>
                 <div class="offer-page-text">
                     <p>Jest to substancja pozyskiwana z własnej krwi pacjenta, niewielka ilość krwi pobierana jest bezpośrednio przed zabiegiem, następnie podawana w skórę w formie mezoterapii.</p>
                     </br>
@@ -182,7 +182,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-light-grey pos-rel">
+        <section id="fibryna" class="bg-light-grey pos-rel">
             <div class="glow top-50"></div>
             <div class="container offer-page-container gridCols2">
                 <h2 class="offer-page-header"><span class="c-gold">fibryna</span></br>bogatopłyt&shy;kowa</h2>
