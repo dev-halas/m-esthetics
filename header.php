@@ -23,7 +23,7 @@
 		<header class="header">
 			<nav class="headerNav container">
 				<a href=""<?php echo esc_url(home_url('/')) ?>" class="headerNav--logo">
-					<img src="" alt="LOGO">
+					<img src="<?php echo THEME_URL; ?>_dev/img/logo.png" alt="LOGO">
 				</a>
 				<div class="headerNav--links">
 					<?php wp_nav_menu(array('theme_location' => 'main_nav'));?>

@@ -1,0 +1,111 @@
+.footer {
+    position: relative;
+}
+
+.footerWrapper {
+    border-bottom: .5px solid $grey;
+}
+
+.footerMap {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 5vw;
+    margin-left: 5vw;
+    border-left: .5px solid $grey;
+
+    h1 {
+        font-size: clamp(30px, 2.5vw, 64px);
+    }
+
+    #map {
+        height: 280px;
+    }
+}
+
+.footerContact {
+    grid-column: span 1;
+    border-left: .5px solid $grey;
+}
+
+.footerContact--item {
+    position: relative;
+    display: flex;
+    gap: 3vw;
+    padding: 2.5vw 5vw;
+    border-bottom: .5px solid $grey;
+
+    img {
+        object-fit: contain;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        color: $gold;
+    }
+
+    a {
+        display: block;
+    }
+}
+
+.footerContact--item:last-child {
+    border-bottom: none;
+}
+
+.borderRight::before {
+    content: '';
+    position: absolute;
+    right: 5vw;
+    width: .5px;
+    height: 100%;
+    background-color: $grey;
+    top: 0;
+}
+
+.footerCopy {
+    margin: 0 5vw;
+    border-left: .5px solid $grey;
+    border-right: .5px solid $grey;
+    align-items: center;
+}
+
+.footerCopy--copy {
+    margin-left: 5vw;
+    padding: 50px 0;
+    border-right: .5px solid $grey;
+}
+
+.footerCopy--design {
+    margin-right: 5vw;
+    padding: 50px 0;
+    text-align: right;
+}
+
+@include responsive('tablet') {
+    .footerWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footerMap {
+        margin: 0 5vw;
+    }
+
+    .footerContact {
+        margin-left: 5vw;
+    }
+
+    .footerCopy--copy {
+        border-right: 0;
+        padding: 30px 0 15px 0;
+        border-bottom: .5px solid $grey;
+    }
+
+    .footerCopy--design {
+        text-align: left;
+        margin-left: 5vw;
+        padding: 15px 0 30px 0;
+    }
+}

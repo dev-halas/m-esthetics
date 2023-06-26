@@ -24,8 +24,8 @@ a {
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: calculate-clamp(30, 64);
+    font-weight: 500;
 }
 
 h2 {
@@ -200,4 +200,8 @@ $containerMobile: 90vw;
     -moz-transition-duration: .3s;
     -ms-transition-duration: .3s;
     -o-transition-duration: .3s;
+}
+
+.fontGold {
+    color: $gold;
 }
