@@ -72,6 +72,10 @@
 
     .headerNav {
         flex-wrap: wrap;
+        
+        img {
+            height: 42px;
+        }
     }
 
     .headerNav--links { 
