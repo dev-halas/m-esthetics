@@ -20,7 +20,18 @@
 	
 
 	<body <?php body_class()?>>
-		<h1> Header </h1>
-		
-		<!-- LOGO URL -->
-		<h1><a href="<?php echo esc_url(home_url('/')) ?>"> LOGO URL</a></h1>
+		<header class="header">
+			<nav class="headerNav container">
+				<a href=""<?php echo esc_url(home_url('/')) ?>" class="headerNav--logo">
+					<img src="" alt="LOGO">
+				</a>
+				<div class="headerNav--links">
+					<?php wp_nav_menu(array('theme_location' => 'main_nav'));?>
+				</div>
+				<button class="hamburger" type="button">
+					<span class="hamburger__box">
+						<span class="hamburger__inner"></span>
+					</span>
+				</button>
+			</nav>
+		</header>

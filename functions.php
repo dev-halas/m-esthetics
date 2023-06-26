@@ -10,5 +10,12 @@
 	
 	require_once THEME_DIR.'libs/post-types.php';
 	require_once THEME_DIR.'libs/utils.php';
+
+	//--------------Register menus--------------//
+	if(function_exists('register_nav_menus')) { 
+		register_nav_menus (array(
+			'main_nav' => 'Menu glowne'
+		));
+	}
 	
 ?>
