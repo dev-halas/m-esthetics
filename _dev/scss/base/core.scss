@@ -9,10 +9,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: $dark;
 }
+
+@font-face {
+    font-family: 'Krylon';
+    src: url('../font/krylon.woff') format('woff');
+}
+
 h1, h2, h3, h4 {
     font-family: 'Krylon', sans-serif;
 }
-
 
 
 a {

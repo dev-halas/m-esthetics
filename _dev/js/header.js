@@ -1,7 +1,7 @@
 const header = document.querySelector('.header');
 const hamburger = document.querySelector('.hamburger');
 const headerLinks = document.querySelectorAll('.headerNav--links a');
-const pageHeight = window.innerHeight * 0.1;
+const pageHeight = window.innerHeight * 0.01;
 
 hamburger.addEventListener('click', () => {
     header.classList.toggle('--active');

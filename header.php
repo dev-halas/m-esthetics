@@ -14,7 +14,7 @@
 		<!-- Stylesheets-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preload" as="font" href="/_dev/font/Krylon-Regular.woff" type="font/woff" crossorigin>
+		<link rel="preload" as="font" href="<?php echo esc_url(home_url('/')) ?>_dev/font/krylon.woff" type="font/woff" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo THEME_URL ?>public/main.css">
 	</head>

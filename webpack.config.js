@@ -1,9 +1,8 @@
-const { resolve } = require("path")
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const CssnanoPlugin = require('cssnano-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const { resolve } = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssnanoPlugin = require('cssnano-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -11,16 +10,30 @@ module.exports = {
     output: {
         path: resolve(__dirname, "public/"),
         filename: "bundle.js"
-
     },
-
     module: {
-        rules: [{
-            test: /\.s[ac]ss$/i,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-        }, ],
+        rules: [
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'font/[name].[ext]'
+                        }
+                    }
+                ]
+            }
+        ],
     },
-
     optimization: {
         minimizer: [
             new CssnanoPlugin()
@@ -40,8 +53,6 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './index.php'
-        }),
-
+        })
     ],
-
 };
