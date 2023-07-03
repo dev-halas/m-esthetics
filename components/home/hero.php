@@ -2,11 +2,11 @@
     <div class="heroWrapper container">
         <div class="heroContent">
             <div class="heroContent--text">
-                <h1>Twoje piękno</h1>
-                <h1>w naszych</h1>
-                <h1>rękach</h1>
+                <h1>Twoje piękno<br/>
+                w naszych<br/>
+                rękach</h1>
             </div>
-            <a href="#" class="button">cennik</a>
+            <a href="<?php echo esc_url(home_url('/')) ?>cennik" class="button">cennik</a>
         </div>
         <div class="heroImg">
             <img src="<?php echo THEME_URL; ?>_dev/img/hero-img.jpg" alt="hero-image">
