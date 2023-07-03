@@ -159,7 +159,7 @@ $containerMobile: 90vw;
 }
 
 .glow {
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     box-shadow: 0 0 600px 800px $creamy-glow;
 }
@@ -204,4 +204,44 @@ $containerMobile: 90vw;
 
 .fontGold {
     color: $gold;
+}
+
+.button {
+    display: block;
+    width: fit-content;
+    padding: 13px 65px;
+    background-color: $white;
+    border: 1px solid $dark;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.button:hover {
+    background-color: $gold;
+}
+
+.line {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 0.5px;
+    background-color: $grey;
+}
+
+.l-right {
+    right: 5vw;
+}
+
+.l-left {
+    left: 5vw;
+}
+
+@include responsive('small') {
+    .line {
+        display: none;
+    }
 }
