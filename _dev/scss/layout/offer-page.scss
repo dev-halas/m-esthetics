@@ -34,6 +34,14 @@
     }
 }
 
+.offer-page-link-container {
+    text-align: end;
+
+    @include responsive('tablet') {
+        text-align: start;
+    }
+}
+
 .offer-page-link {
     display: inline-block;
     border: 1px solid $dark;
@@ -43,33 +51,16 @@
 }
 
 .offer-page-container-list {
-    padding: 0 10vw;
-    border-top: 1px solid $grey;
-    border-bottom: 1px solid $grey;
-    justify-items: center;
-
-    @include responsive('tablet') {
-        padding: 0;
-    }
+    padding-top: 5vw;
+    padding-bottom: 7vw;
 }
 
-.offer-page-list {
+.offer-page-container-list-icon {
     display: flex;
     align-items: flex-start;
-    gap: 40px;
-    border-right: 1px solid $grey;
-    padding: 5vw 0;
-    width: 80%;
-
-    &.center {
-        justify-content: center;
-    }
 
     @include responsive('tablet') {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid $grey;
-        padding: 5vw 3vw;
+        padding: 5vw 0;
 
         &.center {
             justify-content: initial;
@@ -77,8 +68,34 @@
     }
 
     @include responsive('small') {
-        padding: 10% 5vw;
         display: block;
+    }
+}
+
+.offer-page-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    width: 80%;
+    margin-left: 20px;
+
+    &.center {
+        justify-content: center;
+    }
+
+    @include responsive('tablet') {
+        width: 100%;
+
+        &.center {
+            justify-content: initial;
+        }
+    }
+
+    @include responsive('small') {
+        display: block;
+        margin-left: 0;
+        margin-top: 20px;
     }
 
     &:first-child {
@@ -93,10 +110,9 @@
 
     h3 {
         color: $gold;
-        transform: rotate(-180deg);
-        writing-mode: vertical-rl;
         margin-top: 5px;
         font-weight: 600;
+        letter-spacing: 1px;
 
         @include responsive('small') {
             transform: rotate(0);
@@ -113,4 +129,8 @@
 
 .pos-rel {
     z-index: -1;
+}
+
+.rotate45 {
+    transform: rotate(45deg);
 }
