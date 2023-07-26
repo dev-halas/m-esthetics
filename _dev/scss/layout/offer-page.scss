@@ -11,6 +11,44 @@
     }
 }
 
+.offer {
+    background-color: $white;
+}
+
+.offerHeader {
+    margin: 0 5vw;
+    border-left: 0.5px solid $grey;
+    border-right: 0.5px solid $grey;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 48px;
+    padding: 64px 0;
+    
+    h1 {
+        font-size: clamp(48px, 6.25vw, 128px);
+        line-height: 1.1;
+    }
+
+    @include responsive('tablet') {
+        min-height: 30vh;
+        padding: 64px 0;
+        gap: 32px;
+    }
+}
+
+.offer-content {
+    border-top: 1px solid $grey;
+    background-color: $white;
+}
+
+.offer-gradient-bg {
+    background: linear-gradient(45deg, rgba(255,250,240,1) 0%, rgba(245,245,245,1) 100%);
+}
+
 .offer-page-image > img {
     width: 100%;
 
@@ -28,9 +66,29 @@
     }
 }
 
+.offer-page-header {
+    line-height: 1.1;
+}
+
+.offer-icon-with-text {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    h3 {
+        color: $gold;
+        font-weight: 900;
+        font-size: clamp(16px, 1vw, 20px);
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+}
+
 .offer-page-text {
-    & > p:last-of-type {
-        margin-bottom: 50px;
+    grid-column: span 2;
+
+    p {
+        margin-bottom: 16px;
     }
 }
 
@@ -58,68 +116,18 @@
 .offer-page-container-list-icon {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
 
-    @include responsive('tablet') {
-        padding: 5vw 0;
-
-        &.center {
-            justify-content: initial;
-        }
-    }
-
-    @include responsive('small') {
-        display: block;
+    img {
+        width: clamp(32px, 3vw, 64px);
     }
 }
 
 .offer-page-list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-    width: 80%;
-    margin-left: 20px;
-
-    &.center {
-        justify-content: center;
-    }
-
-    @include responsive('tablet') {
-        width: 100%;
-
-        &.center {
-            justify-content: initial;
-        }
-    }
-
-    @include responsive('small') {
-        display: block;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    &:first-child {
-        width: 100%;
-    }
-
-    &:last-child {
-        width: 100%;
-        border-right: none;
-        border-bottom: none;
-    }
-
-    h3 {
-        color: $gold;
-        margin-top: 5px;
-        font-weight: 600;
-        letter-spacing: 1px;
-
-        @include responsive('small') {
-            transform: rotate(0);
-            writing-mode: initial;
-            margin: 0;
-            padding-bottom: 2vw;
-        }
+    padding-left: 16px;
+    p {
+        margin-bottom: 16px;
     }
 }
 

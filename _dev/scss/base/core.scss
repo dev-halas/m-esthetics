@@ -8,6 +8,7 @@ body {
     background-color: $white;
     font-family: 'Montserrat', sans-serif;
     color: $dark;
+    font-size: clamp(14px, 0.83vw, 18px);
 }
 
 @font-face {
@@ -15,7 +16,7 @@ body {
     src: url('../font/krylon.woff') format('woff');
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
     font-family: 'Krylon', sans-serif;
 }
 
@@ -108,7 +109,7 @@ $containerMobile: 90vw;
 
 .container-big {
     @extend .container;
-    width: min(94vw, 1920px);
+    width: min(85vw, 1600px);
 
     @include responsive('small') {
         width: min(90vw, 768px);
@@ -127,18 +128,22 @@ $containerMobile: 90vw;
 
 .gridCols1{
     grid-template-columns: repeat(1, 1fr);
+    gap: 42px;
 }
 
 .gridCols2{
     grid-template-columns: repeat(2, 1fr);
+    gap: 42px;
 }
 
 .gridCols3 {
     grid-template-columns: repeat(3, 1fr);
+    gap: 42px;
 }
 
 .gridCols4 {
     grid-template-columns: repeat(4, 1fr);
+    gap: 42px;
 }
 
 .gridCols5 {
@@ -174,10 +179,6 @@ $containerMobile: 90vw;
 @include responsive('tablet') {
     .gridCols2, .gridCols3, .gridCols4 {
         grid-template-columns: 1fr;
-
-        h2 {
-            margin-bottom: 50px;
-        }
     }
 
     .span1, .span2, .span3, .span4 {
