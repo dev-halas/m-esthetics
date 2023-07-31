@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <main>
+    <main style="overflow: hidden">
         <div class="line l-left"></div>
         <div class="line l-right"></div>
         <?php 

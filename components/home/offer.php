@@ -1,5 +1,5 @@
 <section id="offer-container" class="offer">
-    <div class="container offer-container">
+    <div class="container offer-container" data-aos="zoom-in" data-aos-delay="150">
         <div class="offer-left">
             <h2 class="offer-header"><span class="c-gold">m.esthetics</span></br>- nasza</br>oferta</h2>
             <div class="offer-text">
@@ -43,7 +43,7 @@
     </div>
     <div class="glow"></div>
 </section>
-<section id="office">
+<section id="office" data-aos="zoom-out" data-aos-delay="150">
     <div class="office-container">
         <img src="<?php echo THEME_URL; ?>_dev/img/office.jpg" alt="gabinet">
     </div>

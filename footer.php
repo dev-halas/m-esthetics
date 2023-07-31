@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" data-aos="fade-up" data-aos-delay="150">
 	<div class="gridCols2 footerWrapper borderRight borderLeft">
 		<div class="footerMap">
 			<h1><span class="fontGold">kontakt</span> do spelcjalistów</h1>
@@ -40,9 +40,9 @@
 			Wdrożone z pasją przez Sharing Design. Studio Graficzne
 		</div>
 	</div>
-	<?php wp_footer(); ?>
+	
 </footer>
-
+<?php wp_footer(); ?>
 </body>
 
     

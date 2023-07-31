@@ -5,10 +5,30 @@
     get_header();
 
 ?>
-    <div class="offerHeader">
-        <h1><?php the_title(); ?></h1>
-        <a href="#offer" class="button">Zobacz</a>
-    </div>
+    
+    <section class="offer-gradient-bg">
+        <div class="offerHeader">
+            <div class="container">
+                <div class="offerHeader--wrapper" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="offerHeader--title">
+                        <h1><?php the_title(); ?></h1>
+                        <a href="#offer" class="button">Zobacz</a>
+                    </div>
+                    <?php if( have_rows('offer_links') ): ?>
+                        <div class="offerHeader--links">
+                            <ul>
+                                <?php while( have_rows('offer_links') ) : the_row(); 
+                                    $link = get_sub_field('offer_links_id');
+                                ?>
+                                    <li><a href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a></li>
+                                <?php endwhile; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </section>
     <main class="offer" id="offer">
         <?php 
             if( have_rows('offer') ):
@@ -25,8 +45,8 @@
                 $offer_cols = get_sub_field();
             ?>
             
-            <section id="<?php echo $offer_title_gold ?>" class="offer-content <?php if($offer_bg): echo 'offer-gradient-bg'; endif; ?>">
-                <div class="container-big offer-page-container gridCols4">
+            <section id="<?php echo str_replace(' ', '_', $offer_title_gold) .'_'. str_replace(' ', '_', $offer_title) ?>" class="offer-content <?php if($offer_bg): echo 'offer-gradient-bg'; endif; ?>">
+                <div class="container-big offer-page-container gridCols4" data-aos="fade-up" data-aos-delay="150">
                     <h2 class="offer-page-header">
                         <span class="c-gold"><?php echo $offer_title_gold ?></span><br/>
                         <?php echo $offer_title ?>
@@ -43,7 +63,7 @@
 
                 <?php 
                 if( have_rows('offer_4_cols_col') ): ?>
-                    <div class="container-big offer-page-container-list gridCols4">
+                    <div class="container-big offer-page-container-list gridCols4" data-aos="fade-up" data-aos-delay="150">
                         <?php while( have_rows('offer_4_cols_col') ) : the_row(); 
                             $offer_col_img = get_sub_field('offer_4_cols_col_icon');
                             $offer_col_title = get_sub_field('offer_4_cols_col_title');
@@ -72,7 +92,7 @@
                 $fullImage = get_sub_field('offer_full_image_img');
             ?>
 
-                <section id="offer-page-big-image-one">
+                <section id="offer-page-big-image-one" data-aos="zoom-out" data-aos-delay="150">
                     <div class="offer-page-image">
                         <img src="<?php echo $fullImage['url']; ?>" alt="">
                     </div>

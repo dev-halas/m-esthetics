@@ -1,5 +1,5 @@
 <section id="people">
-    <div class="container people-container">
+    <div class="container people-container" data-aos="zoom-in" data-aos-delay="150">
         <div class="people-image">
             <img src="<?php echo THEME_URL; ?>_dev/img/przykladowa-osoba4.png" alt="twarz kobiety z idealna cerą twarzy">
             <div class="people-image-info">
