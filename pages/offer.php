@@ -6,30 +6,30 @@
 
 ?>
     
-    <section class="offer-gradient-bg">
-        <div class="offerHeader">
-            <div class="container">
-                <div class="offerHeader--wrapper" data-aos="zoom-in" data-aos-delay="150">
-                    <div class="offerHeader--title">
-                        <h1><?php the_title(); ?></h1>
-                        <a href="#offer" class="button">Zobacz</a>
-                    </div>
-                    <?php if( have_rows('offer_links') ): ?>
-                        <div class="offerHeader--links">
-                            <ul>
-                                <?php while( have_rows('offer_links') ) : the_row(); 
-                                    $link = get_sub_field('offer_links_id');
-                                ?>
-                                    <li><a href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a></li>
-                                <?php endwhile; ?>
-                            </ul>
+    <main class="offer" id="offer">
+        <section class="offer-gradient-bg">
+            <div class="offerHeader">
+                <div class="container">
+                    <div class="offerHeader--wrapper" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="offerHeader--title">
+                            <h1><?php the_title(); ?></h1>
+                            <a href="#offer" class="button">Zobacz</a>
                         </div>
-                    <?php endif; ?>
+                        <?php if( have_rows('offer_links') ): ?>
+                            <div class="offerHeader--links">
+                                <ul>
+                                    <?php while( have_rows('offer_links') ) : the_row(); 
+                                        $link = get_sub_field('offer_links_id');
+                                    ?>
+                                        <li><a href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a></li>
+                                    <?php endwhile; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <main class="offer" id="offer">
+        </section>
         <?php 
             if( have_rows('offer') ):
                 while ( have_rows('offer') ) : the_row();

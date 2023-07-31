@@ -11,6 +11,10 @@ body {
     font-size: clamp(14px, 0.83vw, 18px);
 }
 
+main {
+    overflow: hidden;
+}
+
 @font-face {
     font-family: 'Krylon';
     src: url('../font/krylon.woff') format('woff');
